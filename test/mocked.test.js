@@ -24,10 +24,10 @@ describe('authentication', () => {
     expect(label).toBe('explore plan');
   });
 
-  it('maps 401 to a clear message with the signup link', async () => {
+  it('maps 401 to a clear message with the registration link', async () => {
     nock(API).get('/v1/me').reply(401, { error: 'invalid_key', message: 'That key is not valid, or is no longer active.' });
     await expect(appTester(App.authentication.test, { authData: { api_key: 'bad' } })).rejects.toThrow(
-      /rejected the API key \(401\).*jobopportunitiesapi\.org\/signup.*no longer active/
+      /rejected the API key \(401\).*jobopportunitiesapi\.org\/register.*no longer active/
     );
   });
 });

@@ -1,6 +1,6 @@
 'use strict';
 
-const { SIGNUP_URL } = require('./lib/constants');
+const { REGISTER_URL } = require('./lib/constants');
 
 const includeBearerToken = (request, z, bundle) => {
   if (bundle.authData && bundle.authData.api_key) {
@@ -35,7 +35,7 @@ const handleErrors = (response, z) => {
   switch (status) {
     case 401:
       throw new z.errors.Error(
-        `Job Opportunities API (JOA) rejected the API key (401). Reconnect with a valid key; a free key (no card required) is available at ${SIGNUP_URL}.${said}`,
+        `Job Opportunities API (JOA) rejected the API key (401). Reconnect with a valid key; a free key (no card required) is available at ${REGISTER_URL}.${said}`,
         'AuthenticationError',
         401
       );

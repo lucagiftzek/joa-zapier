@@ -36,7 +36,7 @@ Commit the `.zapierapprc` written by `register` (it holds the integration id) af
 
 ## 4. Zapier publishing requirements checklist
 - [x] HTTPS, production API (`https://api.jobopportunitiesapi.org`), no hard-coded credentials.
-- [x] Credentials asked only in the authentication step; API-key field with helpText linking to signup.
+- [x] Credentials asked only in the authentication step; API-key field with helpText linking to the registration page.
 - [x] Valid connection label (plan name; never the key).
 - [x] English text; trigger "New Job"/"Job Closed", searches "Find Job"/"Find Jobs"/"Find Company" (no "Get").
 - [x] helpText on every input field; sample data and output fields on every trigger and search.

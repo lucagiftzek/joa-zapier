@@ -6,7 +6,7 @@ career sites. Every field is tagged published, inferred or absent, and closures 
 
 - Website: https://jobopportunitiesapi.org — coverage (live figures): https://jobopportunitiesapi.org/coverage
 - API docs: https://jobopportunitiesapi.org/docs
-- Free API key (no card required): https://jobopportunitiesapi.org/signup
+- Free API key (no card required): https://jobopportunitiesapi.org/register
 
 ## What it offers
 
@@ -29,7 +29,7 @@ Design notes
 - Every returned row counts against the plan's record allowance; field help texts say so and defaults are small.
 - The API silently clamps `limit` to the key's `max_page_size`; list code follows `next_cursor` until it has the
   requested number of rows.
-- Errors: 401 (bad key + signup link), 402 (record allowance used up), 403 (plan does not include the endpoint),
+- Errors: 401 (bad key + registration link), 402 (record allowance used up), 403 (plan does not include the endpoint),
   404 (searches return no result instead), 410 (listing withdrawn), 400/422 (API's parameter message),
   429 (core's ThrottledError honours `Retry-After`).
 - `apply_url` is always the employer's own apply link. When `attribution` / `canonical_url` are present, show the

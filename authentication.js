@@ -1,6 +1,6 @@
 'use strict';
 
-const { BASE_URL, SIGNUP_URL } = require('./lib/constants');
+const { BASE_URL, REGISTER_URL } = require('./lib/constants');
 
 module.exports = {
   type: 'custom',
@@ -10,7 +10,7 @@ module.exports = {
       label: 'API key',
       type: 'password',
       required: true,
-      helpText: `Your Job Opportunities API (JOA) key. Get a free key (no card required) at [jobopportunitiesapi.org/signup](${SIGNUP_URL}); existing keys are in your account dashboard.`,
+      helpText: `Your Job Opportunities API (JOA) key. Get a free key (no card required) at [jobopportunitiesapi.org/register](${REGISTER_URL}); existing keys are in your account dashboard.`,
     },
   ],
   // GET /v1/me returns the key's plan, status and limits.
