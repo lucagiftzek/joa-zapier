@@ -1,0 +1,27 @@
+{
+  "name": "zapier-job-opportunities-api",
+  "version": "1.0.0",
+  "description": "Zapier integration for Job Opportunities API (JOA): employer-direct job postings.",
+  "main": "index.js",
+  "homepage": "https://jobopportunitiesapi.org",
+  "author": "Loukas Tzekos <support@jobopportunitiesapi.org>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "jest --testTimeout 20000 --testPathIgnorePatterns live",
+    "test:live": "jest --testTimeout 30000 test/live.test.js",
+    "validate": "zapier-platform validate --without-style",
+    "build": "zapier-platform build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "zapier-platform-core": "19.1.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nock": "^14.0.17",
+    "zapier-platform-cli": "19.1.0"
+  }
+}
